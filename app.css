@@ -1,0 +1,180 @@
+body {
+    font-family: Inter;
+    color: #1c1c1c;
+    background-color: rgb(255, 252, 254);
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    z-index: 1;
+    margin-top: 50px;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Header */
+
+.displayMonth {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.month {
+    font-weight: 600;
+    color: rgb(144, 25, 187);
+}
+
+.changeMonth {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    font-weight: 900;
+    border: none;
+    border: 1px solid gainsboro;
+    background-color: white;
+    color: rgb(144, 25, 187);
+}
+
+#weekdays {
+    margin-top: 2rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    box-sizing: border-box;
+    padding-bottom: 0.55rem;
+    margin-bottom: 1em;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.25rem;
+
+}
+
+#alldays {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    box-sizing: border-box;
+    align-items: center;
+    column-gap: normal;
+
+}
+
+/*  */
+
+.dt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    max-width: 50px;
+    max-height: 50px;
+    text-align: center;
+    padding: 0.25em;
+    margin: 0.35em 0;
+    border-radius: 50%;
+    border: 1px solid gainsboro;
+    cursor: pointer;
+    position: relative;
+}
+
+.dt:hover,
+.dt:focus {
+    background-color: gainsboro;
+}
+
+.changeMonth:hover {
+    border: 2px solid rgb(144, 25, 187);
+}
+
+#today {
+    background-color: rgb(230, 193, 244);
+}
+
+.event {
+    height: 5px;
+    width: 5px;
+    background-color: rgb(0, 255, 94);
+    border-radius: 50%;
+    font-size: 0px;
+    position: absolute;
+    bottom: 4px;
+    border: 1px solid #8cecb2;
+}
+
+/* modal */
+.modal {
+    position: fixed;
+    top: 200px;
+    right: 50%;
+    left: 50%;
+    background-color: rgb(251, 251, 234);
+    width: 350px;
+    height: 150px;
+    left: calc(50% - 150px - 2rem);
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 10px;
+    z-index: 3;
+    display: none;
+}
+
+input[type=text] {
+    padding: 0.25rem;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(28, 28, 28, 0.9);
+}
+
+.modal-btn {
+    padding: 0.40rem 0.75rem;
+    font-family: Inter;
+    border-radius: 3px;
+    background-color: rgb(158, 224, 252);
+    border: none;
+}
+
+@media(min-width: 750px) {
+    .dt {
+        border-radius: 10px;
+        width: 60px;
+        height: 60px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .event {
+        font-size: 0.50rem;
+        letter-spacing: 2px;
+        display: flex;
+        align-self: flex-end;
+        justify-content: center;
+        position: absolute;
+        padding: 2px 5px;
+        left: 5px;
+        border-radius: 5px;
+        width: initial;
+        height: initial;
+        background-color: rgb(133, 194, 248)
+    }
+}

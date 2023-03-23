@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+    <title>Calendar App</title>
+</head>
+
+<body>
+    <header></header>
+    <main id="main">
+        <div class="displayMonth">
+            <button id="back" class="changeMonth">
+                <pre><</pre>
+            </button>
+            <h2 class="month" id="currentMonth"></h2>
+            <button id="next" class="changeMonth">
+                <pre>></pre>
+            </button>
+        </div>
+        <div id="weekdays">
+            <div class="day-name">Sun</div>
+            <div class="day-name">Mon</div>
+            <div class="day-name">Tue</div>
+            <div class="day-name">Wed</div>
+            <div class="day-name">Thu</div>
+            <div class="day-name">Fri</div>
+            <div class="day-name">Sat</div>
+        </div>
+        <div id="alldays">
+        </div>
+    </main>
+    <div class="modal-overlay" id="modal-overlay">
+    </div>
+    <div id="new-modal" class="new-modal modal">
+        <h2>New Event</h2>
+        <input type="text" id="input-value">
+        <button type="button" id="saveBtn" class="modal-btn">Save</button>
+        <button type="button" id="cancelBtn" class="modal-btn">Cancel</button>
+    </div>
+    <div id="edit-modal" class="edit-modal modal">
+        <h2>Event</h2>
+        <input type="text" id="edit-text">
+        <button type="button" id="delBtn" class="modal-btn">Delete</button>
+        <button type="button" id="closeBtn" class="modal-btn">Close</button>
+    </div>
+    <footer>
+    </footer>
+    <script src="./index.js"></script>
+</body>
+
+</html>
