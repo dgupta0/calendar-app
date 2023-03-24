@@ -91,9 +91,10 @@ function deleteEvent(date) {
     events = events.filter(e => {
         return e.date !== date
     })
-    localStorage.setItem("eventsArr", JSON.stringify(events))
+
     closeModal()
     displayCal()
+    localStorage.setItem("eventsArr", JSON.stringify(events))
 }
 
 function closeModal() {
