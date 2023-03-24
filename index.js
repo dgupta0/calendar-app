@@ -31,7 +31,7 @@ function displayCal() {
         let fillDay = document.createElement("div")
         let dateStr = `${i - indexOfFirstDay}/${month + 1}/${year}`
         let eventForTheDay = events.find(e => dateStr === e.date)
-        console.log(eventForTheDay)
+
         if (i > indexOfFirstDay) {
             if (day === i - indexOfFirstDay && nav === 0) {
                 fillDay.id = "today"
@@ -50,7 +50,7 @@ function displayCal() {
         weekdaysEl.appendChild(fillDay)
     }
 }
-console.log(events)
+
 function openModal(date) {
     let taskOfTheDay;
     const eventForTheDay = events.find(e => date === e.date)
@@ -71,6 +71,8 @@ function openModal(date) {
     document.getElementById("closeBtn").addEventListener("click", closeModal)
     document.getElementById("delBtn").addEventListener("click", () => deleteEvent(date))
     document.getElementById("saveBtn").addEventListener("click", () => saveTask(date))
+
+    console.log(events)
 }
 
 function saveTask(date) {
